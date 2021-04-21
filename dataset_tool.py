@@ -204,10 +204,10 @@ def display(tfrecord_dir):
             break
         if idx == 0:
             print('Displaying images')
-            cv2.namedWindow('dataset_tool')
+            #cv2.namedWindow('dataset_tool')
             print('Press SPACE or ENTER to advance, ESC to exit')
         print('\nidx = %-8d\nlabel = %s' % (idx, labels[0].tolist()))
-        cv2.imshow('dataset_tool', images[0].transpose(1, 2, 0)[:, :, ::-1]) # CHW => HWC, RGB => BGR
+        #cv2.imshow('dataset_tool', images[0].transpose(1, 2, 0)[:, :, ::-1]) # CHW => HWC, RGB => BGR
         idx += 1
         if cv2.waitKey() == 27:
             break
